@@ -24,7 +24,7 @@
 
     "autoload": {
         "psr-4": {
-            "dro\\attachment\\": ""
+            "dro\\attachment\\": "src"
         }
     },
 	"extra": {
