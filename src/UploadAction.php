@@ -11,6 +11,8 @@ class UploadAction extends \yii\base\Action
     public $uploadFormClass;
     public $modelClass;
 
+    public $viewPath = '@dro/attachment/views';
+
     protected $scenario;
     /**
      * @var bool 是否在上传页面内显示已上传附件 list
@@ -49,7 +51,7 @@ class UploadAction extends \yii\base\Action
             }
         }
 
-        $view = "{$model->viewPath}/{$do}";
+        $view = "{$this->viewPath}/{$do}";
         return $this->controller->render($view, ArrayHelper::merge($this->getViewParams(), ['model' => $model]));
     }
 
