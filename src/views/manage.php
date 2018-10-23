@@ -30,7 +30,7 @@ $this->params = [
     <div class="col-md-12 col-lg-8 col-lg-offset-2">
         <?= $this->render('@drodata/views/_alert')  ?>
         <?php Box::begin(['title' => $subtitle]); ?>
-            <?= $this->render('/media/_list', ['dataProvider' => $dataProvider])  ?>
+            <?= $this->render('_list', ['dataProvider' => $dataProvider])  ?>
 
             <div class="row">
                 <div class="col-xs-12">
