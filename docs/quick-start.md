@@ -2,6 +2,10 @@
 
 以 EIMS 中月结账单模型为例，演示一下配置过程，使得账单能支持上传扫描件附件。
 
+> 约定：
+> 
+> 此插件使用了 yii2-utility 中的通用 Media 模型。`UploadAction` 默认使用 `<controller-id>/<action-id>` 同时作为 `UploadAction` 的 scenario 值和 `Media` 的 `type` 值。以账单模型为例，该值是 `billing-image`.
+
 ## 1. Controller
 
 ```php
