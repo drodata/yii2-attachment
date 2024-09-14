@@ -8,7 +8,15 @@
     <tbody>
         <tr>
             <td class="text-center">
-                <?= $model->getThumbnail(400) ?>
+                <?php
+                if ($model->isImage) {
+                    echo $model->getThumbnail(400);
+                } else {
+                    echo $model->actionLink('download', [
+                        'type' => 'icon',
+                    ]);
+                }
+                ?>
             </td>
         </tr>
         <tr>
